@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c262ed86472757e459bcf2a7d7848b93, type: 3}
+  m_Name: weapon_3Oitao
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponObject
+  weaponName: Magnum.38
+  municao: 6
+  damage: 38
