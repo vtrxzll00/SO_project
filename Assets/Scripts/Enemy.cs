@@ -4,11 +4,11 @@ using UnityEngine;
 public class EnemyStats : ScriptableObject
 {
     [Header("Vida")]
-    public float maxHP = 100f;
+    public float maxHP;
 
     [Header("Movimento")]
-    public float moveSpeed = 3.5f;
+    public float moveSpeed;
 
     [Header("Combate")]
-    public float baseDamage = 10f;
+    public float baseDamage;
 }

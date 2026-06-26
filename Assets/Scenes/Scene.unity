@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fdafb0a2b639648950b682992cb676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyObject
-  stats: {fileID: 0}
+  stats: {fileID: 11400000, guid: 4060c6f41a4cb3449887626512d5e613, type: 2}
 --- !u!65 &1003721034
 BoxCollider:
   m_ObjectHideFlags: 0
