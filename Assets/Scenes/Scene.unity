@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fdafb0a2b639648950b682992cb676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyObject
-  stats: {fileID: 11400000, guid: 5bb23b74c133c7c419c8a197f7abf819, type: 2}
+  stats: {fileID: 11400000, guid: 4060c6f41a4cb3449887626512d5e613, type: 2}
 --- !u!135 &838572905
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fdafb0a2b639648950b682992cb676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyObject
-  stats: {fileID: 11400000, guid: 4060c6f41a4cb3449887626512d5e613, type: 2}
+  stats: {fileID: 11400000, guid: 5bb23b74c133c7c419c8a197f7abf819, type: 2}
 --- !u!65 &1003721034
 BoxCollider:
   m_ObjectHideFlags: 0

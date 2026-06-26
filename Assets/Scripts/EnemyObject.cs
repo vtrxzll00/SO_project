@@ -2,41 +2,38 @@ using UnityEngine;
 
 public class EnemyObject : MonoBehaviour
 {
-    [Header("Configuração")]
     [SerializeField] private EnemyStats stats;
 
-    private float currentHP;
+    [Header("Runtime")]
+    [SerializeField] private float currentHP;
+
+    [Header("Stats (Somente Leitura)")]
+    [SerializeField] private float maxHP;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float baseDamage;
 
     public float CurrentHP => currentHP;
-    public float MaxHP => stats.maxHP;
-    public float MoveSpeed => stats.moveSpeed;
-    public float BaseDamage => stats.baseDamage;
+    public float MaxHP => maxHP;
+    public float MoveSpeed => moveSpeed;
+    public float BaseDamage => baseDamage;
 
     private void Awake()
     {
-        currentHP = stats.maxHP;
+        AtualizarStats();
     }
 
-    public void TakeDamage(float damage)
+    private void OnValidate()
     {
-        currentHP -= damage;
-
-        if (currentHP <= 0)
-        {
-            Die();
-        }
+        AtualizarStats();
     }
 
-    public void Heal(float amount)
+    private void AtualizarStats()
     {
-        currentHP += amount;
+        if (stats == null) return;
 
-        if (currentHP > stats.maxHP)
-            currentHP = stats.maxHP;
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
+        maxHP = stats.maxHP;
+        moveSpeed = stats.moveSpeed;
+        baseDamage = stats.baseDamage;
+        currentHP = maxHP;
     }
 }
