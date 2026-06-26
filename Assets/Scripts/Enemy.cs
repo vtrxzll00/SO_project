@@ -1,22 +1,14 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+[CreateAssetMenu(fileName = "EnemyStats", menuName = "Stats/Enemy Stats")]
+public class EnemyStats : ScriptableObject
 {
-    [Header("Parametros do inimigo")]
-   [SerializeField] private string enemyName;
-   [SerializeField] private float healty;
-   [SerializeField] private int speed;
-   [SerializeField] private float attack;
+    [Header("Vida")]
+    public float maxHP = 100f;
 
-    [Header("SO do Inimigo")]
-    public EnemyObject enemy;
+    [Header("Movimento")]
+    public float moveSpeed = 3.5f;
 
-    private void Start()
-    {
-        enemyName = enemy.enemyName;
-        healty = enemy.healty;
-        speed = enemy.speed;
-        attack = enemy.attack;
-    }
-
+    [Header("Combate")]
+    public float baseDamage = 10f;
 }

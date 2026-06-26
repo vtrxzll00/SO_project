@@ -1,12 +1,42 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "enemy", menuName = "Enemy/new Enemy")]
-
-public class EnemyObject : ScriptableObject
+public class EnemyObject : MonoBehaviour
 {
-  [Header ("Parametros do inimigo")]
-  public string enemyName;
-  public float healty;
-  public int speed;
-  public float attack;
+    [Header("Configuração")]
+    [SerializeField] private EnemyStats stats;
+
+    private float currentHP;
+
+    public float CurrentHP => currentHP;
+    public float MaxHP => stats.maxHP;
+    public float MoveSpeed => stats.moveSpeed;
+    public float BaseDamage => stats.baseDamage;
+
+    private void Awake()
+    {
+        currentHP = stats.maxHP;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHP -= damage;
+
+        if (currentHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Heal(float amount)
+    {
+        currentHP += amount;
+
+        if (currentHP > stats.maxHP)
+            currentHP = stats.maxHP;
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
 }
